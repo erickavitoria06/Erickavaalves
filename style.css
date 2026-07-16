@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+
+}
+
+body {
+
+    background: var(--escuro);
+    color: var(--claro);
+
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+
+}
+
+.menu {
+
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+
+}
+
+.menu-link {
+
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+
+}
+
+.menu-link::after {
+
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.4s ease;
+
+}
+
+.menu-link:hover::after {
+
+    width: 100%;
+
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.foto-perfil {
+
+    width: 350px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+    box-shadow: 0 0 25px rgba(79, 70, 229, 0.4);
+   animation: flutuar 8s ease-in-out infinite;
+
+}
+
+.foto-perfil:hover {
+
+    transform: scale(1.05);
+
+}
+
+h1 {
+
+    font-size: 3.5rem;
+    color: var(--primaria);
+    margin: 20px;
+
+}
+
+.sub-titulo {
+
+    font-size: 1.5rem;
+    color: var(--claro);
+
+}
+
+/* SOBRE */
+
+.sobre {
+
+    padding: 6rem 2rem;
+
+}
+
+.sobre-titulo {
+
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.sobre-caixa {
+
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+
+}
+
+.sobre-paragrafo {
+
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+
+}
+
+/*SEÇÃO PROJETOS*/
+
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.title-projetos {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--branco);
+}
+
+/* Grid que mantém os cards do mesmo tamanho na mesma linha */
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    /* Garante que todos os cards da mesma linha tenham a mesma altura */
+}
+
+/* Card Individual */
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    /* Organiza o conteúdo em coluna para manter o padrão */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Faz o card ocupar toda a altura da grid */
+}
+
+.projetos-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+    border-color: rgba(79, 70, 229, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    
+    /* Altura fixa para padronizar todos os cards */
+    object-fit: cover;
+    border-bottom: 1px solid var(--vidro);
+}
+
+/* Bloco de Conteúdo */
+.projetos-texto {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Faz o texto preencher o espaço restante */
+}
+
+.info-projetos {
+    font-size: 1.4rem;
+    color: #4f46e5;
+    /* Cor roxa similar ao seu hover */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.paragrafo-projetos {
+    color: var(--claro);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para os nomes dos cursos dentro do parágrafo */
+.paragrafo-projetos strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/*SEÇÃO CERTIFICAÇÕES*/
+
+.certificacao {
+    padding: 6rem 2rem;
+}
+
+.certificacao-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--branco);
+}
+
+/* Grid que mantém os cards do mesmo tamanho na mesma linha */
+
+.certificacao-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    /* Garante que todos os cards da mesma linha tenham a mesma altura */
+}
+
+/* Card Individual */
+.certificca-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    /* Organiza o conteúdo em coluna para manter o padrão */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Faz o card ocupar toda a altura da grid */
+}
+
+.certificca-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+    border-color: rgba(79, 70, 229, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    
+    /* Altura fixa para padronizar todos os cards */
+    object-fit: cover;
+    border-bottom: 1px solid var(--vidro);
+}
+
+/* Bloco de Conteúdo */
+.caixa-texto {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Faz o texto preencher o espaço restante */
+}
+
+.info-academico {
+    font-size: 1.4rem;
+    color: #4f46e5;
+    /* Cor roxa similar ao seu hover */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.paragrafo-info {
+    color: var(--claro);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para os nomes dos cursos dentro do parágrafo */
+.paragrafo-info strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* CONTATOS */
+
+.contatos {
+
+    padding: 5rem 2rem;
+
+}
+
+.contatos-titulo {
+
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+
+}
+
+.form-contato {
+
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--vidro);
+
+}
+
+.grupo-form {
+
+    margin-bottom: 1.5rem;
+
+}
+
+.campo-form {
+
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--claro);
+    outline: none;
+    transition: all 0.3s;
+
+}
+
+.campo-form:focus {
+
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+
+}
+
+/* BOTÃO */
+
+.btn-form {
+
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    transition: all 0.4s ease;
+
+}
+
+.btn-form:hover {
+
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+
+}
+
+/* RESPONSIVO */
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .certificca-card {
+        flex-direction: column;
+        /* No celular, imagem em cima e texto embaixo */
+    }
+
+    .certif-img,
+    .caixa-texto {
+        width: 100%;
+    }
+
+    .certif-img {
+        height: 150px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .menu {
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .sub-titulo {
+        font-size: 1.2rem;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+.particulas {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--maisEscuro) 0%, transparent 20%);
+
+}
+
+@keyframes flutuar {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+50%{
+
+   transform: translateY(-20px);
+    
+}
+
+}
