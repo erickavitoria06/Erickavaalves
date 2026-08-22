@@ -8,7 +8,7 @@
             const texto = `Olá, me chamo ${nome}, ${mensagem}`
             const msgformatada = encodeURIComponent(texto)
 
-            const url = `https://wa.me/${telefone}/?text=${msgformatada}`
+            const url = `https://wa.me/${telefone}?text=${msgformatada}`
 
             window.open(url, '_blank')
         }
