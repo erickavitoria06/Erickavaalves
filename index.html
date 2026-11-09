@@ -1,198 +1,792 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> DevFullStack | Portifólio</title>
+
+    <meta name="description" content="Portfólio profissional de Ericka Vitória, estudante de Sistemas de Informação, técnica em Informática e desenvolvedora em formação.">
+
+    <meta name="author" content="Ericka Vitória">
+
+    <title>Ericka Vitória | Portfólio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
     <div class="particulas"></div>
 
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
+    <!-- NAVEGAÇÃO -->
 
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
+    <header>
 
-            <li>
-                <a href="#projetos" class="menu-link">Projetos e Apresentações</a>
-            </li>
+        <nav class="navegacao">
 
-            <li>
-                <a href="#certificacao" class="menu-link">Certificações</a>
-            </li>
+            <a href="#inicio" class="logo">EV<span>.</span></a>
 
-            <li>
-                <a href="#contatos" class="menu-link">Contatos</a>
-            </li>
-        </ul>
-    </nav>
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menu" aria-expanded="false">
+                ☰
+            </button>
 
-    <!--FOTO DE PERFIL-->
+            <ul class="menu" id="menu">
+
+                <li>
+                    <a href="#inicio" class="menu-link">Início</a>
+                </li>
+
+                <li>
+                    <a href="#sobre" class="menu-link">Sobre mim</a>
+                </li>
+
+                <li>
+                    <a href="#tecnologias" class="menu-link">Tecnologias</a>
+                </li>
+
+                <li>
+                    <a href="#projetos" class="menu-link">Projetos</a>
+                </li>
+
+                <li>
+                    <a href="#iniciacao" class="menu-link">Pesquisa</a>
+                </li>
+
+                <li>
+                    <a href="#formacao" class="menu-link">Formação</a>
+                </li>
+
+                <li>
+                    <a href="#contatos" class="menu-link">Contato</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- INÍCIO -->
 
     <main id="inicio" class="cabecalho">
 
-        <img src="Imagens/imglogo.jpg" alt="Foto de Ericka Vitória" class="foto-perfil">
-        <h1>Ericka Vitória</h1>
-        <p class="sub-titulo">Desenvolvedora FullStack iniciante</p>
+        <div class="inicio-conteudo">
+
+            <span class="inicio-tag">
+                Tecnologia • Desenvolvimento • Inovação
+            </span>
+
+            <h1>
+                Olá, eu sou <span>Ericka Vitória</span>
+            </h1>
+
+            <h2 class="sub-titulo">
+                Estudante de Sistemas de Informação
+            </h2>
+
+            <p class="inicio-descricao">
+                Técnica em Informática e desenvolvedora em formação.
+                Tenho interesse em desenvolvimento de software,
+                tecnologia e criação de soluções que conectam
+                conhecimento, inovação e criatividade.
+            </p>
+
+            <div class="inicio-botoes">
+
+                <a href="#projetos" class="btn-principal">
+                    Conheça meus projetos
+                </a>
+
+                <a href="#contatos" class="btn-secundario">
+                    Entre em contato
+                </a>
+
+            </div>
+
+            <div class="inicio-social">
+
+                <span>Belém - PA</span>
+                <span>Estudante de TI</span>
+
+            </div>
+
+        </div>
+
+        <div class="inicio-imagem">
+
+            <div class="imagem-fundo"></div>
+
+            <img
+                src="Imagens/imglogo.jpg"
+                alt="Foto de Ericka Vitória"
+                class="foto-perfil"
+            >
+
+            <div class="imagem-legenda">
+                Desenvolvendo ideias e soluções.
+            </div>
+
+        </div>
 
     </main>
 
-    <!--SOBRE MIM-->
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
+    <!-- SOBRE MIM -->
+
+    <section id="sobre" class="secao sobre">
+
+        <div class="secao-cabecalho">
+
+            <span class="secao-tag">01 / SOBRE</span>
+
+            <h2 class="sobre-titulo">
+                Um pouco sobre mim
+            </h2>
+
+        </div>
+
         <div class="sobre-caixa">
 
-            <p class="sobre-paragrafo"> Estudante de sistemas de informação e técnica em Informática, com interesse em
-                desenvolvimento de software e tecnologia.
-                Sou proativa, organizada, comunicativa e tenho facilidade para aprender e busco melhorar meus
-                conhecimentos em desenvolvimento web e demais aplicações. </p>
+            <div class="sobre-texto">
+
+                <p class="sobre-paragrafo">
+                    Sou estudante de <strong>Sistemas de Informação</strong>
+                    pela Faci Wyden e técnica em Informática pela
+                    EETEPA Magalhães Barata.
+                </p>
+
+                <p class="sobre-paragrafo">
+                    Tenho interesse em desenvolvimento de software,
+                    tecnologia e inovação. Durante minha formação,
+                    venho desenvolvendo projetos práticos e participando
+                    de atividades acadêmicas que ampliam meus conhecimentos
+                    técnicos e profissionais.
+                </p>
+
+                <p class="sobre-paragrafo">
+                    Sou proativa, organizada, comunicativa e tenho
+                    facilidade para aprender. Busco constantemente
+                    aprimorar minhas habilidades e transformar
+                    conhecimentos em soluções tecnológicas.
+                </p>
+
+            </div>
+
+            <div class="sobre-destaques">
+
+                <div class="destaque-item">
+                    <span class="destaque-numero">2024</span>
+                    <span class="destaque-texto">
+                        Formação técnica em Informática
+                    </span>
+                </div>
+
+                <div class="destaque-item">
+                    <span class="destaque-numero">2026</span>
+                    <span class="destaque-texto">
+                        Graduação em Sistemas de Informação
+                    </span>
+                </div>
+
+                <div class="destaque-item">
+                    <span class="destaque-numero">TI</span>
+                    <span class="destaque-texto">
+                        Desenvolvimento e inovação
+                    </span>
+                </div>
+
+            </div>
 
         </div>
 
     </section>
-    <section id="projetos" class="projetos">
-        <h2 class="title-projetos">Projetos</h2>
+
+
+    <!-- TECNOLOGIAS -->
+
+    <section id="tecnologias" class="secao tecnologias">
+
+        <div class="secao-cabecalho">
+
+            <span class="secao-tag">02 / HABILIDADES</span>
+
+            <h2 class="tecnologias-titulo">
+                Tecnologias e ferramentas
+            </h2>
+
+            <p class="secao-descricao">
+                Tecnologias que utilizo e venho aprimorando
+                durante minha formação e projetos práticos.
+            </p>
+
+        </div>
+
+        <div class="tecnologias-grid">
+
+            <!-- DESENVOLVIMENTO WEB -->
+
+            <div class="tecnologia-card">
+
+                <h3>Desenvolvimento Web</h3>
+
+                <div class="tags">
+
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRAMAÇÃO -->
+
+            <div class="tecnologia-card">
+
+                <h3>Linguagens de Programação</h3>
+
+                <div class="tags">
+
+                    <span>C</span>
+                    <span>C#</span>
+                    <span>Python</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- BANCO DE DADOS -->
+
+            <div class="tecnologia-card">
+
+                <h3>Banco de Dados</h3>
+
+                <div class="tags">
+
+                    <span>SQL</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FERRAMENTAS -->
+
+            <div class="tecnologia-card">
+
+                <h3>Ferramentas e Ambiente</h3>
+
+                <div class="tags">
+
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="tecnologias-observacao">
+            Conhecimentos em constante desenvolvimento e
+            aprimoramento por meio de estudos e experiências práticas.
+        </p>
+
+    </section>
+
+
+    <!-- PROJETOS E EXPERIÊNCIAS -->
+
+    <section id="projetos" class="secao projetos">
+
+        <div class="secao-cabecalho">
+
+            <span class="secao-tag">03 / EXPERIÊNCIAS</span>
+
+            <h2 class="title-projetos">
+                Projetos e experiências
+            </h2>
+
+            <p class="secao-descricao">
+                Algumas experiências acadêmicas e atividades
+                que contribuíram para minha formação profissional.
+            </p>
+
+        </div>
 
         <div class="projetos-caixa">
 
-            <!-- Projeto 1 -->
+            <!-- PROJETO 1 -->
 
-            <div class="projetos-card">
-                <img src="Imagens/openday.jpeg" alt="Foto do Openday" class="foto">
+            <article class="projetos-card">
 
-                <div class="projetos-texto">
-                    <h3 class="info-projetos">Open Day Colégio Ideal</h3>
-
-                    <p class="paragrafo-projetos">
-                        No dia 23 de abril de 2026 participei do 1º Open Day anual da instituição Faci Wyden em conjunto
-                        com o Colégio Ideal.
-                        Atuei apresentando e explicando sobre o curso de Sistemas de informação para os alunos visitantes, mostrando os
-                        diferenciais da área de Tecnologia da Informação,
-                        os objetivos da graduação e as oportunidades no mercado de trabalho.
-                        Foi uma experiência muito enriquecedora, que contribuiu bastante para desenvolver minha
-                        oratória, comunicação e também agregar ainda mais ao meu currículo.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Projeto 2 -->
-
-            <div class="projetos-card">
-                <img src="Imagens/visita2.jpeg" alt="Foto com a proprietária" class="foto">
+                <img
+                    src="Imagens/openday.jpeg"
+                    alt="Participação no Open Day da Faci Wyden"
+                    class="foto"
+                >
 
                 <div class="projetos-texto">
-                    <h3 class="info-projetos">Projeto de fidelização de clientes no Studio Marilene Vaz</h3>
+
+                    <span class="projeto-categoria">
+                        Experiência acadêmica
+                    </span>
+
+                    <h3 class="info-projetos">
+                        Open Day Colégio Ideal
+                    </h3>
 
                     <p class="paragrafo-projetos">
-                        Realizei uma visita técnica a uma clínica de estética com o objetivo de conhecer as estratégias
-                        utilizadas para fidelização de clientes e compreender como a tecnologia pode contribuir para a
-                        melhoria da experiência do consumidor.
-                        Durante a visita, observei os processos de atendimento, relacionamento com os clientes,
-                        agendamento de serviços, acompanhamento pós-atendimento e as ações empregadas para fortalecer a
-                        fidelização, como programas de benefícios, comunicação personalizada e uso de ferramentas
-                        digitais.
-                        Essa experiência proporcionou uma visão prática sobre a integração entre gestão, marketing e
-                        tecnologia, ampliando meus conhecimentos sobre estratégias de retenção de clientes e reforçando
-                        a importância de oferecer um atendimento de qualidade aliado a soluções tecnológicas eficientes.
+                        Em 23 de abril de 2026, participei do
+                        primeiro Open Day anual da Faci Wyden
+                        em conjunto com o Colégio Ideal.
                     </p>
+
+                    <p class="paragrafo-projetos">
+                        Atuei apresentando e explicando o curso
+                        de Sistemas de Informação aos alunos visitantes,
+                        abordando os diferenciais da área de Tecnologia
+                        da Informação, os objetivos da graduação e
+                        as oportunidades no mercado de trabalho.
+                    </p>
+
+                    <p class="paragrafo-projetos">
+                        A experiência contribuiu para o desenvolvimento
+                        da minha comunicação, oratória e capacidade
+                        de apresentar conhecimentos técnicos.
+                    </p>
+
                 </div>
-            </div>
+
+            </article>
+
+
+            <!-- PROJETO 2 -->
+
+            <article class="projetos-card">
+
+                <img
+                    src="Imagens/visita2.jpeg"
+                    alt="Visita técnica ao Studio Marilene Vaz"
+                    class="foto"
+                >
+
+                <div class="projetos-texto">
+
+                    <span class="projeto-categoria">
+                        Projeto acadêmico
+                    </span>
+
+                    <h3 class="info-projetos">
+                        Fidelização de clientes — Studio Marilene Vaz
+                    </h3>
+
+                    <p class="paragrafo-projetos">
+                        Realizei uma visita técnica a uma clínica
+                        de estética com o objetivo de conhecer
+                        estratégias de fidelização de clientes
+                        e compreender como a tecnologia pode
+                        contribuir para a experiência do consumidor.
+                    </p>
+
+                    <p class="paragrafo-projetos">
+                        Durante a visita, observei processos de
+                        atendimento, agendamento, relacionamento
+                        com clientes e acompanhamento pós-atendimento,
+                        além de ferramentas digitais utilizadas
+                        na gestão dos serviços.
+                    </p>
+
+                    <p class="paragrafo-projetos">
+                        A atividade ampliou minha compreensão
+                        sobre a integração entre gestão, marketing
+                        e tecnologia.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJETO 3 -->
+
+            <article class="projetos-card">
+
+                <div class="projeto-imagem-placeholder">
+                    <span>01</span>
+                    <p>Desenvolvimento de soluções digitais</p>
+                </div>
+
+                <div class="projetos-texto">
+
+                    <span class="projeto-categoria">
+                        Desenvolvimento de software
+                    </span>
+
+                    <h3 class="info-projetos">
+                        Projetos práticos de desenvolvimento
+                    </h3>
+
+                    <p class="paragrafo-projetos">
+                        Durante minha formação técnica e graduação,
+                        desenvolvi projetos envolvendo aplicações
+                        web, lógica de programação, interfaces
+                        e soluções digitais.
+                    </p>
+
+                    <p class="paragrafo-projetos">
+                        Entre as experiências estão a criação
+                        de currículo virtual, quiz interativo,
+                        sistema de controle de estoque e aplicações
+                        voltadas à resolução de problemas práticos.
+                    </p>
+
+                </div>
+
+            </article>
 
         </div>
+
     </section>
 
-    <!--CERTIFICAÇÕES-->
 
-    <section id="certificacao" class="certificacao">
-        <h2 class="certificacao-title">Minhas certificações</h2>
+    <!-- INICIAÇÃO CIENTÍFICA -->
 
-        <div class="certificacao-caixa">
+    <section id="iniciacao" class="secao iniciacao">
 
-            <div class="certificca-card">
+        <div class="secao-cabecalho">
 
-                <div class="caixa-texto">
-                    <h3 class="info-academico">Acadêmico</h3>
+            <span class="secao-tag">04 / PESQUISA E INOVAÇÃO</span>
 
-                    <p class="paragrafo-info">
-                        <strong>Curso Téc. Informática</strong><br>
-                        Instituição: EETEPA - Magalhães Barata<br>
-                        Status: concluído (2022-2024)
-                    </p>
+            <h2 class="iniciacao-titulo">
+                Iniciação Científica
+            </h2>
 
-                    <p class="paragrafo-info">
-                        <strong>Bacharelado em Sistemas de Informação</strong><br>
-                        Instituição: Faci Wyden<br>
-                        Status: em andamento | previsão de conclusão: 30 de junho de 2029
-                    </p>
-                </div>
-            </div>
+            <p class="secao-descricao">
+                Pesquisa, tecnologia e desenvolvimento de soluções
+                com impacto acadêmico e socioambiental.
+            </p>
 
-            <div class="certificca-card">
-
-                <div class="caixa-texto">
-                    <h3 class="info-academico">Cursos</h3>
-
-                    <p class="paragrafo-info">
-                        <strong>Programação de Aplicativos</strong><br>
-                        Instituição: Prepara Cursos<br>
-                        Status: concluído (2023-2024)
-                    </p>
-
-                    <p class="paragrafo-info">
-                        <strong>Preparatório Primeiro Emprego</strong><br>
-                        Instituição: Prepara Cursos<br>
-                        Status: concluído (2021-2023)
-                    </p>
-                </div>
-            </div>
-
-            <div class="certificca-card">
-
-                <div class="caixa-texto">
-                    <h3 class="info-academico">Desenvolvimento</h3>
-                    <p class="paragrafo-info">
-                        <strong>Criando um projeto com interface gráfica (Python/Kivy)</strong><br>
-                        Instituição: Fundação Bradesco<br>
-                        Status: concluído (Janeiro de 2026)
-                    </p>
-                </div>
-            </div>
         </div>
+
+        <article class="ic-card">
+
+            <div class="ic-conteudo">
+
+                <span class="ic-tag">
+                    Pesquisa acadêmica • Blockchain • ESG
+                </span>
+
+                <h3>WydenCoin / FaciCoin</h3>
+
+                <h4>
+                    Moeda digital e incentivos acadêmicos
+                </h4>
+
+                <p class="ic-descricao">
+                    Projeto de iniciação científica voltado ao
+                    desenvolvimento de uma solução de moeda social
+                    digital baseada em tecnologia blockchain,
+                    buscando integrar incentivos acadêmicos,
+                    economia circular e práticas sustentáveis.
+                </p>
+
+                <h4>Objetivos do projeto</h4>
+
+                <ul class="ic-lista">
+
+                    <li>
+                        Utilizar tecnologia blockchain para
+                        registrar e gerenciar transações digitais.
+                    </li>
+
+                    <li>
+                        Incentivar a participação em atividades
+                        acadêmicas e iniciativas institucionais.
+                    </li>
+
+                    <li>
+                        Integrar conceitos de sustentabilidade,
+                        economia circular e indicadores ESG.
+                    </li>
+
+                    <li>
+                        Explorar o uso de contratos inteligentes
+                        na construção da solução.
+                    </li>
+
+                </ul>
+
+                <h4>Minha atuação</h4>
+
+                <p class="ic-descricao">
+                    Atuação na integração da solução e na qualidade
+                    do projeto, colaborando com a organização
+                    técnica, comunicação entre componentes,
+                    validação e acompanhamento do desenvolvimento.
+                </p>
+
+                <div class="ic-tecnologias">
+
+                    <span>Blockchain</span>
+                    <span>Hyperledger Besu</span>
+                    <span>Smart Contracts</span>
+                    <span>ESG</span>
+                    <span>Economia Circular</span>
+                    <span>Git/GitHub</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
     </section>
 
 
-    <!--CONTATOS-->
+    <!-- FORMAÇÃO E CERTIFICAÇÕES -->
 
-    <section id="contatos" class="contatos">
+    <section id="formacao" class="secao formacao">
 
-        <h2 class="contatos-titulo">Entre em contato</h2>
-        <form class="form-contato" id="form">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
-            </div>
-            <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
-            </div>
+        <div class="secao-cabecalho">
 
-            <button type="submit" class="btn-form" onclick="enviarWhats(event)">Enviar WhatsApp</button>
+            <span class="secao-tag">05 / FORMAÇÃO</span>
 
-        </form>
+            <h2 class="certificacao-title">
+                Formação e certificações
+            </h2>
+
+        </div>
+
+        <div class="formacao-grid">
+
+            <!-- FORMAÇÃO ACADÊMICA -->
+
+            <article class="formacao-card">
+
+                <span class="formacao-icon">01</span>
+
+                <h3>Formação acadêmica</h3>
+
+                <div class="formacao-item">
+
+                    <h4>Bacharelado em Sistemas de Informação</h4>
+
+                    <p>Faci Wyden</p>
+
+                    <span>
+                        Em andamento • 2026–2029
+                    </span>
+
+                </div>
+
+                <div class="formacao-item">
+
+                    <h4>Técnico em Informática</h4>
+
+                    <p>EETEPA Magalhães Barata</p>
+
+                    <span>
+                        Concluído • 2022–2024
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- CURSOS -->
+
+            <article class="formacao-card">
+
+                <span class="formacao-icon">02</span>
+
+                <h3>Cursos complementares</h3>
+
+                <div class="formacao-item">
+
+                    <h4>Programação de Aplicativos</h4>
+
+                    <p>Prepara Cursos</p>
+
+                    <span>
+                        Concluído • 2023–2024
+                    </span>
+
+                </div>
+
+                <div class="formacao-item">
+
+                    <h4>Preparatório Primeiro Emprego</h4>
+
+                    <p>Prepara Cursos</p>
+
+                    <span>
+                        Concluído • 2021–2023
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- DESENVOLVIMENTO -->
+
+            <article class="formacao-card">
+
+                <span class="formacao-icon">03</span>
+
+                <h3>Desenvolvimento</h3>
+
+                <div class="formacao-item">
+
+                    <h4>
+                        Criando um projeto com interface gráfica
+                        (Python/Kivy)
+                    </h4>
+
+                    <p>Fundação Bradesco</p>
+
+                    <span>
+                        Concluído • Janeiro de 2026
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
 
     </section>
 
-</form>
-</section>
 
-<script src="script.js"></script>
+    <!-- CONTATO -->
+
+    <section id="contatos" class="secao contatos">
+
+        <div class="secao-cabecalho">
+
+            <span class="secao-tag">06 / CONTATO</span>
+
+            <h2 class="contatos-titulo">
+                Vamos conversar?
+            </h2>
+
+            <p class="secao-descricao">
+                Estou aberta a oportunidades, conexões profissionais,
+                projetos e experiências na área de tecnologia.
+            </p>
+
+        </div>
+
+        <div class="contatos-container">
+
+            <div class="contatos-info">
+
+                <h3>Entre em contato</h3>
+
+                <p>
+                    Será um prazer conversar sobre tecnologia,
+                    projetos e oportunidades profissionais.
+                </p>
+
+                <div class="contato-links">
+
+                    <!-- SUBSTITUIR PELOS LINKS REAIS -->
+
+                    <a href="https://github.com/" target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORMULÁRIO WHATSAPP -->
+
+            <form class="form-contato" id="form">
+
+                <div class="grupo-form">
+
+                    <label for="nome">Seu nome</label>
+
+                    <input
+                        type="text"
+                        placeholder="Digite seu nome"
+                        class="campo-form"
+                        id="nome"
+                        name="nome"
+                        required
+                    >
+
+                </div>
+
+                <div class="grupo-form">
+
+                    <label for="mensagem">Sua mensagem</label>
+
+                    <textarea
+                        class="campo-form"
+                        placeholder="Como posso ajudar?"
+                        rows="6"
+                        id="mensagem"
+                        name="mensagem"
+                        required
+                    ></textarea>
+
+                </div>
+
+                <button type="submit" class="btn-form">
+                    Enviar mensagem pelo WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape">
+
+        <a href="#inicio" class="logo">EV<span>.</span></a>
+
+        <p>
+            Desenvolvido por Ericka Vitória
+        </p>
+
+        <span>
+            © 2026 • Todos os direitos reservados.
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
 
 </body>
 
