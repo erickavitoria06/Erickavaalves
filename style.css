@@ -2,7 +2,7 @@
    CONFIGURAÇÕES GERAIS
 ======================================== */
 
--- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,6 +41,11 @@ body {
     color: var(--claro);
     overflow-x: hidden;
     line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
@@ -102,7 +107,6 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    box-sizing: border-box;
     padding: 1.2rem 7%;
     background: rgba(8, 11, 24, 0.92);
     backdrop-filter: blur(18px);
@@ -173,56 +177,12 @@ body::before {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .navegacao {
-        padding: 1rem 5%;
-    }
-
-    .menu-toggle {
-        display: block;
-        z-index: 1001;
-    }
-
-    .menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        max-height: calc(100vh - 75px);
-        overflow-y: auto;
-        box-sizing: border-box;
-        padding: 1.5rem 5%;
-        background: rgba(8, 11, 24, 0.98);
-        backdrop-filter: blur(18px);
-        flex-direction: column;
-        align-items: center;
-        gap: 1.2rem;
-        border-bottom: 1px solid var(--borda);
-    }
-
-    .menu.ativo {
-        display: flex;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-link {
-        display: block;
-        width: 100%;
-        padding: 0.7rem 0;
-        font-size: 1rem;
-    }
-}
-
 
 /* INÍCIO */
 
 .cabecalho {
     min-height: 100vh;
+    min-height: 100svh;
     padding: 130px 10% 80px;
     display: flex;
     justify-content: space-between;
@@ -554,7 +514,7 @@ h1 span {
 
 .projetos-caixa {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 2rem;
     max-width: 1250px;
     margin: auto;
@@ -917,75 +877,99 @@ h1 span {
 
 @keyframes flutuar {
     0%, 100% {
-        transform: translateY(0);
+        translate: 0 0;
     }
     50% {
-        transform: translateY(-15px);
+        translate: 0 -15px;
     }
 }
 
 
-/* RESPONSIVIDADE */
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
 
+/* Telas muito grandes */
+@media (min-width: 1600px) {
+    html {
+        font-size: 112.5%;
+    }
+}
+
+/* Notebook pequeno / tablet */
 @media (max-width: 1000px) {
-    .navegacao {
-        padding: 1.2rem 4%;
-    }
-    .menu {
-        gap: 1rem;
-    }
-    .menu-link {
-        font-size: 0.8rem;
-    }
     .cabecalho {
         padding: 130px 6% 80px;
         gap: 2rem;
     }
+
     .foto-perfil {
         width: 270px;
         height: 270px;
     }
+
     .imagem-fundo {
         width: 300px;
         height: 300px;
     }
+
     .formacao-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+/* Menu hambúrguer + contatos em uma coluna */
+@media (max-width: 900px) {
     .navegacao {
-        padding: 1rem 6%;
+        padding: 1rem 5%;
     }
+
     .menu-toggle {
         display: block;
+        z-index: 1001;
     }
+
     .menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
+        max-height: calc(100vh - 70px);
+        max-height: calc(100dvh - 70px);
+        overflow-y: auto;
+        padding: 1rem 5%;
+        background: rgba(8, 11, 24, 0.98);
+        backdrop-filter: blur(18px);
         flex-direction: column;
         align-items: center;
         gap: 0;
-        padding: 1rem 0;
-        background: rgba(8, 11, 24, 0.98);
         border-bottom: 1px solid var(--borda);
     }
+
     .menu.ativo {
         display: flex;
     }
+
     .menu li {
         width: 100%;
         text-align: center;
     }
+
     .menu-link {
         display: block;
         padding: 1rem;
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
+
+    .contatos-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px) {
     .cabecalho {
         min-height: auto;
         padding: 140px 7% 90px;
@@ -993,105 +977,132 @@ h1 span {
         text-align: center;
         gap: 3rem;
     }
+
     .inicio-conteudo {
         max-width: 100%;
     }
+
+    .inicio-descricao {
+        margin-inline: auto;
+        font-size: 0.95rem;
+    }
+
     h1 {
         font-size: 2.7rem;
     }
+
     .sub-titulo {
         font-size: 1.2rem;
     }
-    .inicio-descricao {
-        font-size: 0.95rem;
-    }
+
     .inicio-botoes,
     .inicio-social {
         justify-content: center;
     }
+
     .foto-perfil {
         width: 230px;
         height: 230px;
     }
+
     .imagem-fundo {
         width: 260px;
         height: 260px;
     }
+
     .secao {
         padding: 5rem 6%;
     }
+
     .sobre-caixa {
         grid-template-columns: 1fr;
         padding: 2rem;
         gap: 2rem;
     }
+
     .sobre-paragrafo {
-        text-align: left;
         font-size: 0.95rem;
     }
+
     .tecnologias-grid,
     .projetos-caixa,
     .formacao-grid {
         grid-template-columns: 1fr;
     }
+
     .ic-card {
         padding: 2rem;
     }
+
     .ic-conteudo h3 {
         font-size: 1.8rem;
     }
-    .contatos-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+
     .form-contato {
         padding: 1.5rem;
     }
 }
 
+/* Celular pequeno */
 @media (max-width: 480px) {
     h1 {
         font-size: 2.2rem;
     }
+
     .sub-titulo {
         font-size: 1.05rem;
     }
+
     .inicio-tag {
         font-size: 0.72rem;
     }
+
     .foto-perfil {
         width: 200px;
         height: 200px;
     }
+
     .imagem-fundo {
         width: 230px;
         height: 230px;
     }
+
     .imagem-legenda {
         font-size: 0.7rem;
+        white-space: normal;
+        text-align: center;
+        max-width: 90%;
     }
+
     .secao {
         padding: 4rem 5%;
     }
+
     .secao-cabecalho h2 {
         font-size: 2rem;
     }
+
     .sobre-caixa,
     .ic-card {
         padding: 1.4rem;
     }
+
     .tecnologia-card,
     .formacao-card {
         padding: 1.5rem;
     }
+
     .inicio-botoes {
         flex-direction: column;
     }
+
     .inicio-botoes a {
         width: 100%;
+        text-align: center;
     }
 }
 
+/* Acessibilidade: reduz animações */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

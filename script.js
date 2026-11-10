@@ -1,45 +1,109 @@
+/* ========================================
+   MENU MOBILE
+======================================== */
 
-function enviarWhats(event) {
-    event.preventDefault();
+const botaoMenu = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+function fecharMenu() {
+    menu.classList.remove('ativo');
+    botaoMenu.setAttribute('aria-expanded', 'false');
+    botaoMenu.setAttribute('aria-label', 'Abrir menu');
+    botaoMenu.textContent = '☰';
+}
+
+botaoMenu.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('ativo');
+    botaoMenu.setAttribute('aria-expanded', String(aberto));
+    botaoMenu.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    botaoMenu.textContent = aberto ? '✕' : '☰';
+});
+
+// Fecha o menu ao clicar em um link
+menu.querySelectorAll('.menu-link').forEach((link) => {
+    link.addEventListener('click', fecharMenu);
+});
+
+// Fecha com a tecla Esc
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fecharMenu();
+});
+
+// Fecha ao voltar para a tela de PC
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) fecharMenu();
+});
+
+
+/* ========================================
+   FORMULÁRIO → WHATSAPP
+======================================== */
+
+// Troque pelo seu número: código do país + DDD + número, só dígitos
+const NUMERO_WHATSAPP = '55XXXXXXXXXXX';
+
+document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault();
 
     const nome = document.getElementById('nome').value.trim();
     const mensagem = document.getElementById('mensagem').value.trim();
-    const telefone = '5591985553738';
 
-    if (!nome || !mensagem) {
-        alert('Preencha todos os campos!');
-        return;
-    }
+    const texto = `Olá, meu nome é ${nome}.\n\n${mensagem}`;
+    const url = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
 
-    const texto = `Olá, me chamo ${nome}. ${mensagem}`;
-    const msgformatada = encodeURIComponent(texto);
+    window.open(url, '_blank', 'noopener');
+});/* ========================================
+   MENU MOBILE
+======================================== */
 
-    const url = `https://wa.me/${telefone}?text=${msgformatada}`;
+const botaoMenu = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-    window.open(url, '_blank');
+function fecharMenu() {
+    menu.classList.remove('ativo');
+    botaoMenu.setAttribute('aria-expanded', 'false');
+    botaoMenu.setAttribute('aria-label', 'Abrir menu');
+    botaoMenu.textContent = '☰';
 }
 
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const linksMenu = document.querySelectorAll('.menu-link');
-
-menuToggle.addEventListener('click', () => {
+botaoMenu.addEventListener('click', () => {
     const aberto = menu.classList.toggle('ativo');
-
-    menuToggle.setAttribute('aria-expanded', aberto);
-    menuToggle.setAttribute(
-        'aria-label',
-        aberto ? 'Fechar menu' : 'Abrir menu'
-    );
-
-    menuToggle.textContent = aberto ? '✕' : '☰';
+    botaoMenu.setAttribute('aria-expanded', String(aberto));
+    botaoMenu.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    botaoMenu.textContent = aberto ? '✕' : '☰';
 });
 
-linksMenu.forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('ativo');
-        menuToggle.textContent = '☰';
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menu');
-    });
+// Fecha o menu ao clicar em um link
+menu.querySelectorAll('.menu-link').forEach((link) => {
+    link.addEventListener('click', fecharMenu);
+});
+
+// Fecha com a tecla Esc
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fecharMenu();
+});
+
+// Fecha ao voltar para a tela de PC
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) fecharMenu();
+});
+
+
+/* ========================================
+   FORMULÁRIO → WHATSAPP
+======================================== */
+
+// Troque pelo seu número: código do país + DDD + número, só dígitos
+const NUMERO_WHATSAPP = '55XXXXXXXXXXX';
+
+document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    const texto = `Olá, meu nome é ${nome}.\n\n${mensagem}`;
+    const url = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank', 'noopener');
 });
